@@ -248,4 +248,8 @@ h2 {
     .content {
         max-width: 350px;
     }
+
+    .message {
+        top:80%;
+    }
 }
