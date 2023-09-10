@@ -12,8 +12,8 @@ html {
     --neu-clr-grayish-blue: hsl(216, 11%, 9%);
     --neu-clr-white: hsl(0, 0%, 100%);
     --neu-clr-black: hsl(0, 0%, 0%);
-    --acc-clr-bright-orange1: hsl(41, 88%, 45%);
-    --acc-clr-bright-orange2: hsl(41, 63%, 55%);
+    --acc-clr-bright-blue: hsl(184, 87%, 50%);
+    --acc-clr-medium-blue: hsl(184, 58%, 52%);
 }
 
 body {
@@ -36,7 +36,7 @@ body {
 h1,
 h2 {
     font-family: 'Anton', sans-serif;
-    color: var(--acc-clr-bright-orange1);
+    color: var(--acc-clr-medium-blue);
     text-align: center;
     text-transform: uppercase;
 }
@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-    color: var(--acc-clr-bright-orange2);
+    color:var(--acc-clr-bright-blue);
     font-size: 2.5em;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -87,7 +87,7 @@ h2 {
     transform: translate(-50%, -50%);
     width: 800px;
     height: 300px;
-    background: linear-gradient(transparent, orange, orange, transparent);
+    background: linear-gradient(transparent, rgb(101, 245, 255), rgb(101, 245, 255), transparent);
     animation: animate 4s linear infinite;
 }
 
@@ -130,7 +130,7 @@ h2 {
 }
 
 .content .kriss {
-    color: var(--acc-clr-bright-orange2);
+    color: var(--acc-clr-medium-blue);
     margin-top: 1em;
     margin-right: 1em;
     text-align: right;
@@ -138,10 +138,17 @@ h2 {
 }
 
 .message {
+    position: absolute;
+    left:55%;
+    top:70%;
     padding: 0.25em 0.5em;
-    background-color: var(--acc-clr-bright-orange2);
-    animation: blink 2s linear 3;
+
+    color: var(--acc-clr-medium-blue);
+    font-size: 1em;
+    font-style: italic;
+    animation: blink 2s linear 2;
     opacity: 0;
+    z-index: 8;
 }
 
 @keyframes blink {
@@ -170,11 +177,6 @@ h2 {
     }
 }
 
-.message p {
-    font-size: 0.75em;
-    color: var(--neu-clr-grayish-blue);
-}
-
 .card:hover,
 .card:active {
     .h1 {
@@ -187,9 +189,10 @@ h2 {
         transition: opacity 2s linear;
     }
 
-    .message {
-        visibility: hidden;
+    .message{
+        opacity: 0;
     }
+
 }
 
 
